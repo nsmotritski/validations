@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.800" timestamp="2021-11-19T15:15:23.203284" hostname="Nikolai"><testcase classname="" name="pythontestingframework_execute_tests.tests.test_parameterized" file="pythontestingframework_execute_tests/tests/test_parameterized.py" time="0.000"><error message="collection failure">ImportError while importing test module 'D:\ISsoft\Life Time\ebi-pythontestingframework-function-qa\pythontestingframework_execute_tests\tests\test_parameterized.py'.
+Hint: make sure your test modules/packages have valid Python names.
+Traceback:
+C:\Users\nikol\AppData\Local\Programs\Python\Python39\lib\importlib\__init__.py:127: in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+pythontestingframework_execute_tests\tests\test_parameterized.py:9: in &lt;module&gt;
+    from pythontestingframework_execute_tests.db.Database import Database
+pythontestingframework_execute_tests\db\Database.py:10: in &lt;module&gt;
+    from db.connections import mms_qa_akv, pool_pass_qa_akv, lt_udw_qa_akv
+E   ModuleNotFoundError: No module named 'db.connections'</error></testcase></testsuite></testsuites>

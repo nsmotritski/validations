@@ -1,0 +1,8 @@
+select
+party_id
+,dim_mms_member_key
+,outdoor_pool_access_acquisition_type
+,Pool_Access_From_Date
+,Pool_Access_Through_Date
+,cb
+from dbo.mv_party_pool_pass_access

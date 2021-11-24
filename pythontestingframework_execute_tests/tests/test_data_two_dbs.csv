@@ -1,0 +1,3 @@
+test_pre_stage_mms_ValAcquisitionType,mms_qa,mms_qa.ValAcquisitionType.sql,lt_udw_qa_akv,lt_udw_qa.pre_stage_mms_ValAcquisitionType.sql,[Nikolai]
+test_pre_stage_mms_LTFKeyType,mms_qa,mms_qa.LTFKeyType.sql,lt_udw_qa_akv,lt_udw_qa.pre_stage_mms_LTFKeyType.sql
+test_pre_stage_pool_pass_GuestVisits,pool_pass_qa,pool_pass_qa.GuestVisits.sql,lt_udw_qa_akv,lt_udw_qa.pre_stage_pool_pass_GuestVisits.sql

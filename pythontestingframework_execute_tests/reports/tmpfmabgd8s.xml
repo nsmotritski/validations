@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="2.000" timestamp="2021-11-19T15:20:06.238926" hostname="Nikolai"><testcase classname="" name="pythontestingframework_execute_tests.tests.test_parameterized" file="pythontestingframework_execute_tests/tests/test_parameterized.py" time="0.000"><error message="collection failure">pythontestingframework_execute_tests\tests\test_parameterized.py:33: in &lt;module&gt;
+    ???
+pythontestingframework_execute_tests\tests\test_parameterized.py:15: in get_data
+    csvReader = csv.reader(codecs.open('output.csv', mode='rU', encoding='utf-16'))
+C:\Users\nikol\AppData\Local\Programs\Python\Python39\lib\codecs.py:905: in open
+    file = builtins.open(filename, mode, buffering)
+E   FileNotFoundError: [Errno 2] No such file or directory: 'output.csv'</error></testcase></testsuite></testsuites>
