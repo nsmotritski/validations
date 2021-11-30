@@ -9,8 +9,8 @@ from ast import literal_eval
 from pythontestingframework_execute_tests.db.connections import mms_qa_akv, pool_pass_qa_akv, lt_udw_qa_akv
 from pythontestingframework_execute_tests.common import keyvault
 
-queries_folder = os.environ.get("QUERIES_FOLDER")
-tests_folder = os.environ.get("TESTS_FOLDER")
+queries_folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "queries")
+tests_folder = os.path.join(os.path.dirname(os.path.realpath(__file__)), "..", "tests")
 
 
 class Database:

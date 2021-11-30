@@ -3,7 +3,7 @@ import csv
 import codecs
 import os
 
-tests_folder = os.environ.get("TESTS_FOLDER")
+tests_folder = os.path.dirname(os.path.realpath(__file__))
 
 from pythontestingframework_execute_tests.db.Database import Database
 from pythontestingframework_execute_tests.common import utils

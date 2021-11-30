@@ -24,7 +24,7 @@ def get_secret_value(secret_name, environment="qa"):
         result = _sc_qa.get_secret(secret_name).value
     return result
 
-
+"""
 def get_database_credentials(db_name,username_secret_name = db_username_secret_name, password_secret_name = db_password_secret_name):
     db_switcher = {
         'lt_udw_qa_akv': (get_secret_value(username_secret_name, environment='dev'), get_secret_value(password_secret_name, environment='dev')),
@@ -32,6 +32,14 @@ def get_database_credentials(db_name,username_secret_name = db_username_secret_n
         'mms_qa_akv': ('mms_qa', 'mms_qa')
     }
     creds = db_switcher.get(db_name, "Invalid database name!")
+    # print("db username= " + db_username + "; db password = " + db_password + ";")
+    # print(env.get("IsEncrypted", ""))
+    return creds
+"""
+
+
+def get_database_credentials(db_name,username_secret_name = db_username_secret_name, password_secret_name = db_password_secret_name):
+    creds = ('InformaticaUser','Informatic@1')
     # print("db username= " + db_username + "; db password = " + db_password + ";")
     # print(env.get("IsEncrypted", ""))
     return creds

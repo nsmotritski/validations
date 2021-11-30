@@ -5,7 +5,7 @@ from azure.storage.blob import ContainerClient
 from _pytest.junitxml import LogXML
 from pythontestingframework_execute_tests.common import keyvault
 
-reports_folder = os.environ.get("REPORTS_FOLDER")
+temp_folder = tempfile.gettempdir()
 
 def get_files(directory):
     with os.scandir(directory) as entries:
@@ -29,15 +29,17 @@ def pytest_configure(config):
     if config.option.xmlpath:  # was passed via config or command line
         return  
     if not hasattr(config, 'slaveinput'):
-        with tempfile.NamedTemporaryFile(suffix='.xml', dir=reports_folder) as tmpfile:
+        print(temp_folder)
+        with tempfile.NamedTemporaryFile(suffix='.xml', dir=temp_folder) as tmpfile:
             xmlpath = tmpfile.name
             config._xml = LogXML(xmlpath, config.option.junitprefix, config.getini('junit_suite_name'))
             config.pluginmanager.register(config._xml)
 
 
 def pytest_unconfigure():
-    secret = keyvault.get_secret_value(secret_name="ebidatalakeblobqa-full-connection-string", environment='qa')
-    files = get_files(reports_folder)
+    #secret = keyvault.get_secret_value(secret_name="ebidatalakeblobqa-full-connection-string", environment='qa')
+    secret = "DefaultEndpointsProtocol=https;AccountName=ebidatalakeblobqa;AccountKey=bMxE35yDW+shMlQscketTOPpyYB1Tzbr+itVbMEDRXm1gSNmemD8xbdNxx3xLlZX4XvtxXGGjfJJRGCNvODdQQ==;EndpointSuffix=core.windows.net"
+    files = get_files(temp_folder)
     upload_latest_report(files, secret, "automated-testing-results")
 
 

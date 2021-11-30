@@ -7,3 +7,6 @@ azure-functions
 azure-functions-durable
 azure-storage-blob
 pyodbc
+azure-identity
+azure-keyvault-secrets
+pgi
