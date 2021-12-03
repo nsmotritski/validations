@@ -1,4 +1,4 @@
-from os import environ as env
+import os
 from azure.identity import ClientSecretCredential
 from azure.keyvault.secrets import SecretClient
 from azure.identity import DefaultAzureCredential
@@ -37,9 +37,12 @@ def get_database_credentials(db_name,username_secret_name = db_username_secret_n
     return creds
 """
 
+db_username = os.environ["DB_USERNAME"]
+db_password = os.environ["DB_PASSWORD"]
+
 
 def get_database_credentials(db_name,username_secret_name = db_username_secret_name, password_secret_name = db_password_secret_name):
-    creds = ('InformaticaUser','Informatic@1')
+    creds = (db_username, db_password)
     # print("db username= " + db_username + "; db password = " + db_password + ";")
     # print(env.get("IsEncrypted", ""))
     return creds

@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="1.069" timestamp="2021-11-22T10:00:41.949432" hostname="Nikolai"><testcase classname="" name="pythontestingframework_execute_tests.tests.test_parameterized" file="pythontestingframework_execute_tests/tests/test_parameterized.py" time="0.000"><error message="collection failure">pythontestingframework_execute_tests\tests\test_parameterized.py:41: in &lt;module&gt;
-    ???
-pythontestingframework_execute_tests\tests\test_parameterized.py:27: in get_data
-    with open(file_name, newline='', mode="r", encoding='utf-8') as f:
-E   FileNotFoundError: [Errno 2] No such file or directory: 'test_data_one_db.csv'</error></testcase></testsuite></testsuites>

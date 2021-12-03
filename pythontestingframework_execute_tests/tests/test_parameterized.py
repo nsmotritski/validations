@@ -31,9 +31,6 @@ def get_data(file_name, index=0):
                          ids=get_data('test_data_one_db.csv'))
 def test_one_database(values):
     #   Step 1: Get connection string from command line argument if defined
-    #    if db_conn == "default db_conn":
-    #    db_conn = connections.lt_udw_qa_conn
-
     db = Database(Database.get_connection(values[0], output_file=False))
 
     #   Step 2: Get data from source table

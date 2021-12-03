@@ -37,8 +37,7 @@ def pytest_configure(config):
 
 
 def pytest_unconfigure():
-    #secret = keyvault.get_secret_value(secret_name="ebidatalakeblobqa-full-connection-string", environment='qa')
-    secret = "DefaultEndpointsProtocol=https;AccountName=ebidatalakeblobqa;AccountKey=bMxE35yDW+shMlQscketTOPpyYB1Tzbr+itVbMEDRXm1gSNmemD8xbdNxx3xLlZX4XvtxXGGjfJJRGCNvODdQQ==;EndpointSuffix=core.windows.net"
+    secret = os.environ["AKV_CONNECTION_STRING"]
     files = get_files(temp_folder)
     upload_latest_report(files, secret, "automated-testing-results")
 

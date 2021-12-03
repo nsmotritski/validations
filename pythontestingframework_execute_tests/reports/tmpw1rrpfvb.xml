@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.476" timestamp="2021-11-22T12:30:46.724828" hostname="Nikolai"><testcase classname="" name="pythontestingframework_execute_tests.tests.test_parameterized" file="pythontestingframework_execute_tests/tests/test_parameterized.py" time="0.000"><error message="collection failure">pythontestingframework_execute_tests\tests\test_parameterized.py:10: in &lt;module&gt;
-    tests_folder = config['TESTS_FOLDER']
-C:\Users\nikol\AppData\Local\Programs\Python\Python39\lib\configparser.py:960: in __getitem__
-    raise KeyError(key)
-E   KeyError: 'TESTS_FOLDER'</error></testcase></testsuite></testsuites>

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.673" timestamp="2021-11-22T12:38:57.093332" hostname="Nikolai"><testcase classname="" name="pythontestingframework_execute_tests.tests.test_parameterized" file="pythontestingframework_execute_tests/tests/test_parameterized.py" time="0.000"><error message="collection failure">pythontestingframework_execute_tests\tests\test_parameterized.py:8: in &lt;module&gt;
-    tests_folder = os.environ("TESTS_FOLDER")
-E   TypeError: '_Environ' object is not callable</error></testcase></testsuite></testsuites>
